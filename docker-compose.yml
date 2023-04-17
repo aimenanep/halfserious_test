@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  starwars_backend:
+    build:
+      context: ./api_scrapper
+
+    container_name: starwars_backend
+    volumes:
+      - ./api_scrapper:/app
+    ports:
+      - "8000:8000"
+    restart: always
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  starwars_frontend:
+    build:
+      context: ./front
+
+    container_name: starwars_frontend  
+    # volumes:
+    #   - ./front:/app
+    ports:
+      - "3000:3000"
+    command: npm start 
+    depends_on:
+      - starwars_backend
+    

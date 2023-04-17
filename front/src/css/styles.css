@@ -1,0 +1,18 @@
+@import "colors.css";
+@import "stars.css";
+@import "animations.css";
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+*
+{
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: 'Star Wars', sans-serif;
+    margin: 0;
+    padding: 0;  
+    background: transparent;   
+    color:var(--body-color) !important                                    
+}

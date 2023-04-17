@@ -1,0 +1,11 @@
+:root{
+    --primary: rgb(221, 221, 34);
+    --body-color: #aaa;
+    --body-bg: #000;
+    --white:#fff;
+    --black:#000;
+    
+}
+
+.text-white  {color: var(--white)}
+.text-primary  {color: var(--primary)}
